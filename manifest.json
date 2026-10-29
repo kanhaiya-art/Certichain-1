@@ -1,0 +1,32 @@
+[
+  {
+    "id": "CC-DEMO-2026-001",
+    "name": "Foundations of Python",
+    "recipient": "Aarav Mehta",
+    "issuer": "CertiChain Demo Academy",
+    "issued_on": "2026-08-12",
+    "description": "Completed the foundational Python programming learning track.",
+    "certificate_type": "sample",
+    "file_name": "CC-DEMO-2026-001-python.pdf"
+  },
+  {
+    "id": "CC-DEMO-2026-002",
+    "name": "Introduction to Data Analytics",
+    "recipient": "Sara Khan",
+    "issuer": "CertiChain Demo Academy",
+    "issued_on": "2026-09-03",
+    "description": "Completed the introductory data analytics learning programme.",
+    "certificate_type": "sample",
+    "file_name": "CC-DEMO-2026-002-analytics.pdf"
+  },
+  {
+    "id": "CC-DEMO-2026-003",
+    "name": "Cybersecurity Essentials",
+    "recipient": "Rohan Verma",
+    "issuer": "Open Skills Lab (Demo)",
+    "issued_on": "2026-09-21",
+    "description": "Completed a demonstration course in cybersecurity fundamentals.",
+    "certificate_type": "sample",
+    "file_name": "CC-DEMO-2026-003-cybersecurity.pdf"
+  }
+]
