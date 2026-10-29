@@ -28,6 +28,9 @@ from certichain_core import (
 
 APP_DIR = Path(__file__).resolve().parent
 SAMPLES_DIR = APP_DIR / "samples"
+# The repository may store sample files in the root instead of samples/.
+if not (SAMPLES_DIR / "manifest.json").exists() and (APP_DIR / "manifest.json").exists():
+    SAMPLES_DIR = APP_DIR
 ISSUED_DIR = APP_DIR / "data" / "issued"
 PAGES = ["Dashboard", "Verify certificate", "Issue demo certificate", "Ledger explorer"]
 
