@@ -177,10 +177,17 @@ def registration_details(certificate: dict[str, Any], note: str) -> dict[str, An
 
 def create_initial_state(app_dir: Path) -> dict[str, Any]:
     """Create the initial registry from the sample PDF files bundled with the project."""
+    # Support both the preferred samples/ layout and repositories where
+    # the manifest and sample PDFs were uploaded directly into the root.
     samples_dir = app_dir / "samples"
     manifest_path = samples_dir / "manifest.json"
     if not manifest_path.exists():
-        raise FileNotFoundError(f"Sample manifest not found: {manifest_path}")
+        samples_dir = app_dir
+        manifest_path = samples_dir / "manifest.json"
+    if not manifest_path.exists():
+        raise FileNotFoundError(
+            f"Sample manifest not found. Checked: {app_dir / 'samples' / 'manifest.json'} and {app_dir / 'manifest.json'}"
+        )
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     state: dict[str, Any] = {
         "schema_version": SCHEMA_VERSION,
